@@ -176,3 +176,4 @@ cython_debug/
 # MacOS users:
 .DS_Store
 data/*
+wandb/*
