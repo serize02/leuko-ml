@@ -175,5 +175,5 @@ cython_debug/
 
 # MacOS users:
 .DS_Store
-data/data.csv
+artifacts/*
 wandb/*
