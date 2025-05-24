@@ -1,3 +1,9 @@
 data:
   drive: 'https://drive.google.com/uc?/export=download&id=1JGrXjTZsn2IkPesMQ_9E_yYRQ-VfBZ7q'
-  path: 'data/data.csv'
+  local_path: 'data/data.csv'
+
+wandb:
+  dataset:
+    raw:
+      artifact: 'ernestoserize-constructor-university/leuko-ml/acute-stroke-clinical-data:v0'
+      type: 'dataset'
