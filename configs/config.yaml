@@ -6,4 +6,11 @@ wandb:
   dataset:
     raw:
       artifact: 'ernestoserize-constructor-university/leuko-ml/acute-stroke-clinical-data:v0'
-      type: 'dataset'
+    selected:
+      artifact: 'ernestoserize-constructor-university/leuko-ml/acute-stroke-selected:v2'
+  
+  model:
+    knn:
+      artifact: 'ernestoserize-constructor-university/leuko-ml/knn:v0'
+    svc:
+      artifact: 'ernestoserize-constructor-university/leuko-ml/svc:v0'
