@@ -3,14 +3,10 @@ data:
   local_path: 'data/data.csv'
 
 wandb:
-  dataset:
-    raw:
-      artifact: 'ernestoserize-constructor-university/leuko-ml/acute-stroke-clinical-data:v0'
-    selected:
-      artifact: 'ernestoserize-constructor-university/leuko-ml/acute-stroke-selected:v2'
-  
-  model:
-    knn:
-      artifact: 'ernestoserize-constructor-university/leuko-ml/knn:v0'
-    svc:
-      artifact: 'ernestoserize-constructor-university/leuko-ml/svc:v0'
+  datasets:
+    raw: 'ernestoserize-constructor-university/leuko-ml/acute-stroke-clinical-data:v0'
+    selected: 'ernestoserize-constructor-university/leuko-ml/acute-stroke-selected:v2'
+  models:
+    knn: 'ernestoserize-constructor-university/leuko-ml/knn:v0'
+    svc-rbf: 'ernestoserize-constructor-university/leuko-ml/svc:v0'
+    svc-sigmoid: 'ernestoserize-constructor-university/leuko-ml/svc:v1'
