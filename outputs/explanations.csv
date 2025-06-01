@@ -1,0 +1,268 @@
+id,explanation
+0,"The model predicts that a patient with an apache_score of 18.0 has a slightly lower survival chance than the baseline risk, contributing -0.017 to the overall prediction. Similarly, a patient with an LGI of 2430.0 is also predicted to have a lower survival chance compared to the baseline, with a contribution of -0.196."
+1,"The model predicts that a patient with an Apache score of 15 has a higher survival chance, contributing 0.15 to the overall prediction. On the other hand, a patient with LGI of 2340 has a lower survival chance, decreasing the prediction by 0.17. Both of these factors are compared to an average feature value of 22.08."
+2,"The model considers the patient's Apache score of 26.0, which decreases the survival chance by -0.164 compared to the average Apache score of 22.1. Additionally, the LGI of 2285.28 contributes to a -0.050 decrease in survival chance compared to the average LGI of 22.1."
+3,"The feature "apache_score" has a high positive contribution of 0.637 to the survival chance prediction. This patient's score of 8 is much higher than the average score of 22.1.
+
+The feature "LGI" has a small negative contribution of -0.0505 to the prediction. This patient's LGI value of 1944 is similar to the average LGI value of 22.1."
+4,"The feature "apache_score" with a value of 29.0 has a contribution of -0.13238 to the model's prediction. This suggests that patients with a higher apache_score are less likely to survive compared to the average patient.
+
+The feature "LGI" with a value of 3240.0 has a contribution of -0.08095 to the model's prediction. This indicates that patients with a higher LGI value have a slightly lower survival chance compared to the average patient."
+5,"The model explains that a patient with an Apache score of 25 has a lower survival chance by -0.16 compared to the average patient with a similar Apache score of 22.08. Similarly, a patient with LGI of 2340 has a slightly lower survival chance by -0.05 compared to the average patient with an LGI of 22.08."
+6,"The feature "apache_score" has a value of 26.0, which contributes -0.139 to the model's prediction, compared to an average feature value of 22.086. This means that having a higher apache score is associated with a decreased survival chance for patients.
+
+The feature "LGI" has a value of 3060.0, which contributes -0.074 to the model's prediction, compared to an average feature value of 22.086. This suggests that higher values of LGI are associated with a lower survival chance for patients with acute stroke."
+7,"The apache_score feature with a value of 5.0 has a contribution of 0.716, indicating that patients with a higher apache_score are more likely to survive than those with a lower score.
+
+The LGI feature with a value of 1404.0 has a contribution of 0.070, suggesting that patients with a higher LGI value may have a slightly increased survival chance compared to those with a lower value."
+8,"The model considers the patient's Apache score of 28, which has a negative contribution of -0.215 to the prediction. This means that a higher Apache score is associated with a lower survival chance.
+
+The patient's LGI value of 1512 has a positive contribution of 0.002 to the prediction. This suggests that a higher LGI value is slightly associated with a higher survival chance."
+9,"The model considers the patient's apache score of 6.0 to have a high positive impact on the predicted survival chance, contributing 0.676 to the overall prediction. This is significantly higher than the average apache score of 22.08.
+
+Additionally, the patient's LGI value of 900.0 slightly contributes positively to the prediction with a value of 0.110, which is close to the average LGI value of 22.08."
+10,"The model considers an apache score of 10.0 to have a high positive impact on the prediction, increasing the survival chance by 0.55 compared to the average feature value of 22.086. Additionally, a LGI value of 1386.0 slightly contributes to the prediction with a positive impact of 0.036 when compared to the average feature value."
+11,"The model identified that a patient with an apache_score of 10.0 has a higher risk of survival, contributing 0.636 to the overall prediction, compared to the average apache_score of 22.08. Additionally, having an LGI of 1296.0 contributes 0.150 to the prediction for survival chances, in comparison to the average LGI of 22.08. These specific features play a role in determining the likelihood of survival for patients with acute stroke according to the model."
+12,"The feature "apache_score" with a value of 29.0 has a negative contribution of -0.2676. This means that a higher APACHE score is associated with a lower survival chance compared to the average patient.
+
+The feature "LGI" with a value of 1134.0 has a positive contribution of 0.0543. This implies that a higher LGI value is associated with a slightly higher survival chance compared to the average patient."
+13,"The model predicts that a patient with an apache_score of 28.0 has a lower survival chance, contributing -0.1838 to the overall risk. This is compared to an average apache_score of 22.0857 among all patients.
+
+Similarly, a patient with a LGI of 1728.0 has a slightly negative contribution of -0.0295 to the survival chance prediction compared to the average LGI of 22.0857."
+14,"The model predicts that patients with an Apache score of 20 have a lower survival chance compared to the average patient (contribution: -0.070). Patients with an LGI of 2340 also have a lower survival chance compared to the average patient (contribution: -0.143). Overall, the baseline risk for all patients is approximately 0.213."
+15,"The apache_score feature with a value of 7.0 has a significant positive impact on the model's prediction, increasing the survival chance by 0.66 compared to the average feature value of 22.08.
+The LGI feature with a value of 990.0 also contributes positively to the prediction, but to a lesser extent, increasing the survival chance by 0.12 compared to the average feature value of 22.08."
+16,"The model indicates that having an apache_score of 29 reduces the survival chance by 0.18 compared to the average apache_score of 22. 
+
+Similarly, having a LGI of 1782 decreases the survival chance by 0.03 compared to the average LGI of 22. 
+
+Both these factors contribute to lowering the overall survival chance for patients with acute stroke."
+17,"The model's prediction for survival chance of patients with acute stroke is based on various features. For example, a higher apache_score of 21.0 has a negative contribution of -0.1219 compared to an average feature value of 22.0857. Similarly, a larger LGI value of 2106.0 corresponds to a contribution of -0.0914 compared to the average feature value. These features help determine the overall prediction, with the baseline risk being 0.2133 for all patients."
+18,"The patient's apache score of 28 is contributing to a decreased survival chance by -0.1724 compared to the average apache score of 22.1.
+
+The patient's LGI value of 2016 is contributing to a further slight decrease in survival chance by -0.0409 compared to the average LGI value of 22.1."
+19,"The model predicts that patients with a higher APACHE score of 30.0 have a decreased survival chance by -0.1838 compared to the average patient with a score of 22.08.
+Patients with a higher LGI of 1728.0 have a slightly reduced survival chance by -0.0295 compared to the average patient with a score of 22.08."
+20,"The Apache score of 19 decreases the survival chance by approximately 4%. The LGI value of 2106 decreases the survival chance by approximately 17%. Both features contribute to lowering the baseline risk of all patients."
+21,"The model predicts a survival chance of 21.33% for patients with acute stroke as the baseline risk. 
+
+The feature "apache_score" has a value of 29.0, contributing to a decrease of 0.23 in the survival chance compared to the average feature value of 22.08. 
+
+On the other hand, the feature "LGI" with a value of 648.0 adds 0.02 to the survival chance compared to the average feature value."
+22,"The Apache score of 28.0 has a negative contribution of -0.26857 to the survival chance, indicating that a higher Apache score decreases the chance of survival. 
+
+On the other hand, an LGI value of 990.0 has a positive contribution of 0.05524 to the survival chance, suggesting that a higher LGI value increases the chance of survival."
+23,"The model predicts a survival chance of 21.33% for patients with acute stroke as the baseline risk. 
+
+The feature contribution explanations are as follows:
+- A patient with an apache_score of 29.0 has a lower survival chance than the baseline risk, decreasing the prediction by -0.16% compared to an average apache_score of 22.08.
+- A patient with an LGI of 2340.0 also has a lower survival chance than the baseline risk, decreasing the prediction by -0.05% compared to an average LGI of 22.08.
+
+These features indicate that patients with higher apache_score and LGI values are at a higher risk and have lower survival chances according to the model."
+24,"The model considers the patient's apache_score of 27.0, which contributes to a decrease in the survival chance by -0.179. This feature is below the average apache_score of 22.08.
+Similarly, the patient's LGI value of 1944.0 has a contribution of -0.034 to the survival chance, compared to the average LGI value of 22.08."
+25,"The model gives a high positive contribution of 0.544 for apache_score of 12. This means that patients with a higher apache_score are more likely to survive according to the model. 
+
+The model also gives a moderate positive contribution of 0.243 for LGI value of 1080. This suggests that patients with a higher LGI value have a slightly increased chance of survival compared to the average patient."
+26,"The Apache score of 13.0 contributes positively to the prediction, indicating that patients with a higher Apache score are more likely to survive than the average patient.
+
+The LGI value of 792.0 also contributes positively to the prediction, suggesting that patients with a higher LGI value have a higher chance of survival compared to the average patient."
+27,"The model indicates that a higher apache_score (acute physiology and chronic health evaluation) of 29 is associated with a decreased survival chance contribution of -0.1286 compared to the average apache_score of 22.1 among all patients.
+
+Similarly, having a higher LGI (lactate dehydrogenase) value of 3510 is associated with a decreased survival chance contribution of -0.0848 compared to the average LGI value of 22.1 among all patients."
+28,"The model's prediction of survival chance for patients with acute stroke is 0.21333333333333337, which is the baseline risk for all patients. 
+
+The feature `apache_score` with a value of 30.0 has a negative contribution of -0.16095238095238099 compared to the average feature value of 22.085714285714285. This suggests that a higher apache_score is associated with a lower survival chance.
+
+Similarly, the feature `LGI` with a value of 2340.0 has a negative contribution of -0.05238095238095239 compared to the average feature value of 22.085714285714285. This indicates that a higher LGI value is also associated with a lower survival chance for patients with acute stroke."
+29,"The model predicts that a patient with an apache_score of 25.0 has a lower survival chance compared to the baseline risk, with a contribution of -0.245. This means that higher apache_score is associated with decreased survival chance.
+
+On the other hand, a patient with an LGI value of 1296.0 has a slightly increased survival chance compared to the baseline risk, with a contribution of 0.031. This suggests that higher LGI values may be associated with a slightly better chance of survival in acute stroke patients."
+30,"The model indicates that a higher apache_score of 13.0 is associated with a higher survival chance, contributing 0.41 above the baseline risk. Similarly, a larger LGI of 1260.0 is also linked to a slight increase in survival chance, contributing 0.18 above the baseline risk. These features both play a role in the model's prediction of patient survival after an acute stroke."
+31,"The feature "apache_score" has a value of 17.0, contributing positively to the model's prediction by 0.2647 compared to an average feature value of 22.086.
+The feature "LGI" has a value of 792.0, contributing positively to the model's prediction by 0.1219 compared to an average feature value of 22.086."
+32,"The model considers the patient's apache_score of 15.0 to have a positive contribution of 0.3847 to the predicted survival chance, which is higher than the average apache_score of 22.08.
+Similarly, the patient's LGI value of 594.0 has a positive contribution of 0.2019 to the predicted survival chance, which is again higher than the average LGI value of 22.08."
+33,"The Apache score of 25.0 has a negative contribution of -0.179 to the model's prediction. This means that patients with a higher Apache score are less likely to survive compared to the average patient.
+
+The LGI of 1800.0 has a negative contribution of -0.034 to the model's prediction. This indicates that patients with a higher LGI value have a slightly lower chance of survival compared to the average patient."
+34,"The model considers the patient's Apache score of 24.0 to be a negative factor in determining survival chance, as it contributes -0.218 to the baseline risk of 0.213. On the other hand, the patient's LGI value of 360.0 is seen as a slight positive factor, contributing 0.0047 to the baseline risk. Both features are compared to an average feature value of 22.085."
+35,"The Apache score of 24 decreases the survival chance by 0.24 compared to the average feature value of 22.08. Conversely, a LGI value of 792 increases the survival chance by 0.03 compared to the average feature value of 22.08."
+36,"The model indicates that a high APACHE score of 8.0 contributes significantly to the higher survival chance with a contribution of 0.671. Conversely, a low LGI value of 1296.0 has a smaller positive impact on survival, with a contribution of 0.115. These features play a role in determining the individual patient's survival chance compared to the baseline risk of 0.213 for all patients."
+37,"The model predicts a survival chance of 0.213 for all patients with acute stroke. 
+- An Apache score of 15.0 increases the predicted chance of survival by 0.379, as compared to an average Apache score of 22.1.
+- An LGI of 720.0 contributes to a 0.208 increase in the survival prediction, compared to the average LGI value of 22.1."
+38,"The model considers the patient's apache_score of 17.0, which contributes 0.36095 to the prediction. This means that patients with a higher apache_score are more likely to have a higher survival chance compared to the average feature value of 22.08571.
+
+Additionally, the patient's LGI of 1296.0 contributes 0.22571 to the prediction. This suggests that patients with a higher LGI have a slightly higher survival chance compared to the average LGI value of 22.08571."
+39,"The feature apache_score, with a value of 25.0, contributes -0.179 to the model's prediction. This means that patients with a higher apache_score are less likely to survive compared to the average patient.
+
+The feature LGI, with a value of 1800.0, contributes -0.034 to the model's prediction. This suggests that patients with a higher LGI value have a slightly lower chance of survival compared to the average patient."
+40,"The model predicts the survival chance of patients with acute stroke based on certain features. 
+
+- A higher apache_score (acute physiology and chronic health evaluation score) of 29.0 indicates a lower contribution to the prediction, decreasing the survival chance by -0.179 compared to the average feature value of 22.085.
+
+- A high LGI (Large Gymnasium Index) value of 1800.0 also has a negative contribution to the prediction, decreasing the survival chance by -0.034 compared to the average feature value of 22.085.
+
+These feature contributions help explain how the model reaches its prediction of survival chance for patients with acute stroke."
+41,"The model predicts that a patient with an Apache score of 16 has a higher survival chance, contributing 0.33 to the overall prediction. Similarly, a higher LGI of 972 contributes 0.25 to the prediction, indicating a slightly increased chance of survival."
+42,"The model's prediction for a patient with an apache_score of 10.0 is 0.621904761904762, which is higher than the baseline risk of 0.21333333333333337. This feature contributes positively to the prediction.
+
+The model's prediction for a patient with an LGI of 1260.0 is 0.16476190476190467, which is also higher than the baseline risk. However, this feature contributes less positively compared to the apache_score."
+43,"The model's prediction for a patient's survival chance is 21.33%, which is the baseline risk for all patients. 
+
+The feature contribution explanations show that a higher apache_score of 13.0 contributes 51.14% to increasing the survival chance compared to the average feature value of 22.09. Additionally, a higher LGI value of 864.0 contributes 27.52% to increasing the survival chance compared to the average LGI value of 22.09."
+44,"The model predicts that patients with a higher apache_score have a lower survival chance, with a contribution of -0.13 compared to the average apache_score of 22.08. Similarly, patients with a higher LGI (3780.0) tend to have a lower survival chance, with a contribution of -0.09 compared to the average LGI of 22.08."
+45,"The model indicates that a higher Apache score (25.0) is associated with a decreased survival chance (-0.118). Additionally, a higher LGI value (4032.0) is linked to a decrease in survival chance (-0.095). The average value for Apache score and LGI is around 22."
+46,"The feature "apache_score" with a value of 26 decreases the survival chance by -0.218. This means that patients with a higher apache_score have a lower chance of survival compared to the baseline risk of 0.213.
+
+On the other hand, the feature "LGI" with a value of 360 increases the survival chance by 0.005. This suggests that patients with a higher LGI value have a slightly higher chance of survival compared to the baseline risk."
+47,"The model predicted that a patient with an apache_score of 29 has a lower survival chance than the baseline, decreasing it by 0.176. Similarly, a patient with an LGI of 1872 has a slightly lower survival chance compared to the baseline, decreasing it by 0.037."
+48,"The model considers the Apache score of 14.0 as a significant factor in predicting survival chance of patients with acute stroke. The above-average Apache score contributes positively to the prediction, indicating a higher chance of survival. 
+
+Similarly, the model also takes into account the LGI value of 1296.0. This feature value contributes positively to the prediction as well, implying that patients with a higher LGI value are more likely to survive according to the model's calculations."
+49,"The patient's apache score of 25 contributes negatively to their survival chance, reducing it by 0.24 compared to the average apache score of 22.08. Conversely, the patient's LGI of 792 slightly increases their survival chance by 0.03 compared to the average LGI of 22.08."
+50,"The Apache score of 24 indicates a lower risk of survival, with a contribution of -0.22 compared to the average Apache score of 22. This suggests that patients with a higher Apache score have a decreased chance of survival.
+ 
+On the other hand, the LGI of 504 has a positive contribution of 0.01, slightly increasing the survival chance compared to the average LGI of 22. This means that patients with a LGI score of 504 may have a slightly higher chance of survival."
+51,"The Apache score of 26.0 has a negative impact on the survival chance, reducing it by 0.259 compared to the average Apache score of 22.08. On the other hand, a LGI value of 1260.0 slightly increases the survival chance by 0.046 compared to the average LGI value of 22.08."
+52,"The model predicts a baseline survival chance of 21.33% for all patients with acute stroke. 
+
+The Apache score of 24.0 has a negative contribution of -0.167 to the prediction. This means that patients with a higher Apache score are likely to have a slightly lower survival chance compared to the average patient.
+
+Similarly, the LGI value of 2160.0 has a negative contribution of -0.047 to the prediction. This suggests that patients with a higher LGI value may also have a slightly lower survival chance compared to the average patient."
+53,"The Apache score of 28.0 has a negative contribution of -0.235, indicating that higher Apache scores are associated with lower survival chances compared to the average Apache score of 22.1.
+
+Having an LGI value of 720.0 has a positive contribution of 0.022, suggesting that patients with higher LGI values have slightly higher survival chances compared to the average LGI value of 22.1."
+54,"The model indicates that a higher apache_score of 12.0 is contributing positively to the prediction of survival chance for patients with acute stroke, with a contribution of 0.42 above the baseline risk.
+
+On the other hand, a lower LGI value of 1620.0 is contributing negatively to the prediction, with a contribution of -0.036 below the baseline risk."
+55,"The model indicates that a higher apache_score of 24 decreases the survival chance by approximately 16%. Similarly, a higher LGI value of 2430 decreases the survival chance by about 5%. These features contribute to lowering the overall expected survival chance of 21.33% for all patients with acute stroke."
+56,"The feature `apache_score` with a value of 29.0 has a negative contribution of -0.175. This means that having a higher apache score tends to decrease the predicted survival chance compared to the average apache score of 22.1.
+
+The feature `LGI` with a value of 1890.0 has a negative contribution of -0.038. This suggests that having a lower LGI value may slightly decrease the predicted survival chance compared to the average LGI value of 22.1."
+57,"The Apache score of 25 contributes -0.128 to the survival chance, indicating that higher Apache scores are associated with lower survival chances compared to the average Apache score of 22. 
+
+Similarly, an LGI value of 3600 contributes -0.086 to the survival chance, suggesting that higher LGI values are associated with slightly lower survival chances compared to the average LGI value of 22. 
+
+Overall, these features play a role in influencing the model's prediction of survival chances for patients with acute stroke."
+58,"The feature `apache_score` has a value of 22.0, which contributes -0.131 to the model's prediction. This means that having a higher `apache_score` decreases the survival chance of patients. 
+
+The feature `LGI` has a value of 2700.0, which contributes -0.082 to the model's prediction. This suggests that having a higher `LGI` score also decreases the survival chance of patients."
+59,"The model considers an Apache Score of 12 to have a high positive contribution of 0.55 towards the survival chance, compared to an average Apache Score of 22. 
+
+Having a LGI value of 990 also has a positive contribution of 0.24 towards the survival chance, compared to an average LGI value of 22. 
+
+These features are important factors that increase the predicted survival chance of patients with acute stroke above the baseline risk of 0.21."
+60,"The model predicts that patients with a higher apache_score (25.0) have a lower survival chance, contributing -0.192 to the overall prediction. Similarly, patients with a higher LGI of 1620.0 have a slightly lower survival chance, contributing -0.021 to the prediction. These features influence the model's output relative to the average feature values in the dataset."
+61,"The patient's Apache score of 24 decreases their survival chance by 0.179 compared to the average Apache score of 22. 
+
+A LGI of 1800 decreases the survival chance by 0.034 compared to the average LGI of 22."
+62,"The model predicts the survival chance of patients with acute stroke, with an expected baseline risk of 0.21. The feature "apache_score" with a value of 21 has a contribution of -0.098, indicating that a lower apache_score is associated with a slightly lower survival chance. Similarly, the feature "LGI" with a value of 2880 has a contribution of -0.115, suggesting that a higher LGI value is associated with a slightly lower survival chance."
+63,"The Apache score of 18.0 has a positive contribution of 0.0229 to the model's prediction, indicating that patients with a higher Apache score have a slightly increased survival chance compared to the average patient.
+
+On the other hand, an LGI value of 3960.0 has a negative contribution of -0.2362, suggesting that patients with this value have a lower survival chance compared to the average patient."
+64,"The model's prediction for a patient with an apache_score of 16.0 is 0.3019 higher than the baseline risk. 
+Similarly, for a patient with an LGI of 1584.0, the prediction is 0.0848 higher than the baseline risk."
+65,"The model indicates that patients with a higher apache_score have a decreased survival chance, contributing -0.139 to the overall prediction. Similarly, patients with a higher LGI value also have a slightly decreased survival chance, contributing -0.074 to the overall prediction."
+66,"The model predicts that patients with an apache_score of 25 have a decreased survival chance, contributing -0.27 to the baseline risk of 0.21. Conversely, patients with an LGI of 990 have an increased survival chance, contributing 0.06 to the baseline risk."
+67,"The model's prediction for the patient's survival chance decreases by approximately 0.17 due to the Apache score being 27, compared to an average Apache score of 22.08 among all patients.
+
+Similarly, the model's prediction for the patient's survival chance decreases by about 0.05 due to the LGI being 2160, compared to an average LGI of 22.08 among all patients."
+68,"The model predicts that a patient with an apache_score of 23.0 has a lower survival chance compared to the baseline risk, reducing it by -0.235. Conversely, a patient with an LGI of 720.0 has a slightly higher survival chance compared to the baseline risk, increasing it by 0.022."
+69,"The model gives a negative contribution to patients with a higher apache_score, indicating that they have a lower survival chance compared to the average patient. On the other hand, patients with a higher LGI value receive a slightly positive contribution, suggesting they may have a slightly higher survival chance compared to the average patient."
+70,"The Apache score of 24 contributed -0.161 to the model's prediction, which is lower than the average Apache score of 22.086. This indicates that patients with a higher Apache score are less likely to survive after an acute stroke.
+
+Similarly, the LGI value of 2430 contributed -0.052 to the prediction, compared to the average LGI value of 22.086. This suggests that patients with a higher LGI value may have a lower chance of survival after an acute stroke."
+71,"The Apache score of 26.0 has a contribution of -0.161 to the model's prediction, lower than the average Apache score of 22.086. This means that patients with higher Apache scores are less likely to survive according to the model.
+
+The LGI (Lymphocyte to Granulocyte ratio) of 2430.0 has a contribution of -0.052 to the model's prediction, lower than the average LGI value of 22.086. This suggests that patients with lower LGI values are less likely to survive based on the model's prediction."
+72,"The Apache score of 28.0 has a negative impact on the survival chance, decreasing it by 0.27 compared to an average Apache score of 22.1. Conversely, a LGI of 1080.0 has a positive effect, increasing the survival chance by 0.058 compared to an average LGI of 22.1."
+73,"The feature "apache_score" with a value of 13 contributes positively to the model's prediction of survival chance for patients with acute stroke. This feature has a higher than average feature value. 
+
+The feature "LGI" with a value of 1080 also contributes positively to the model's prediction. It has a higher than average feature value, indicating a higher survival chance for patients with this characteristic."
+74,"The Apache score of 23 contributes -0.176 to the model's prediction, indicating that higher Apache scores are associated with lower survival chances compared to the average Apache score of 22.1.
+
+Having an LGI of 1872 contributes -0.037 to the model's prediction, suggesting that higher LGI values are slightly associated with lower survival chances compared to the average LGI value of 22.1."
+75,"The model predicts that the patient has a survival chance of 21.33%. 
+
+The patient's Apache score of 25.0 has a negative contribution of -0.132, which means that having a higher Apache score slightly reduces the survival chance. 
+
+Similarly, the patient's LGI of 3240.0 has a negative contribution of -0.081, indicating that a higher LGI also slightly reduces the survival chance."
+76,"The model indicates that a patient with an apache_score of 21.0 has a slightly lower survival chance compared to the average patient (contribution of -0.134). Similarly, a patient with an LGI of 1800.0 also has a slightly lower survival chance compared to the average patient (contribution of -0.079)."
+77,"The model's prediction of 0.2133 is the baseline survival chance for all patients. 
+
+1. An apache_score of 16.0 increases the survival chance by 0.278 compared to an average apache_score of 22.1. 
+2. An LGI of 1440.0 increases the survival chance by 0.108 compared to an average LGI of 22.1."
+78,"The model predicts that a patient with an apache score of 19 has a slightly higher survival chance compared to the average risk of all patients. 
+Similarly, a patient with LGI of 1188 has a significantly higher survival chance compared to the average risk of all patients."
+79,"The model predicts that patients with a higher apache_score have a lower survival chance compared to the baseline risk. Patients with an apache_score of 27 have a contribution of -0.1838 to the model's output.
+
+Similarly, patients with a higher LGI value have a slightly lower survival chance compared to the baseline risk. Patients with an LGI value of 1728 have a contribution of -0.0295 to the model's output."
+80,"The model indicates that a higher apache_score of 25.0 is associated with a decrease in survival chance by -0.1667 compared to an average apache_score of 22.0857.
+
+Similarly, a higher LGI of 2160.0 is linked to a slight decrease in survival chance by -0.0467 compared to an average LGI of 22.0857."
+81,"The model predicts the survival chance of patients with acute stroke based on different features. The baseline risk for all patients is 0.213. 
+
+The feature "apache_score" with a value of 28 contributes a negative influence of -0.15 to the prediction. This means that a higher apache_score is associated with a lower survival chance compared to the average apache_score of 22.08.
+
+Similarly, the feature "LGI" with a value of 2700 contributes a negative influence of -0.06 to the prediction. This suggests that a higher LGI value is associated with a lower survival chance compared to the average LGI value of 22.08."
+82,"The Apache score of 27.0 has a negative contribution of -0.1505 towards the survival chance prediction. This means that patients with higher Apache scores are less likely to survive compared to the average patient in the dataset.
+
+The LGI value of 2700.0 has a negative contribution of -0.0629 towards the survival chance prediction. This suggests that patients with higher LGI values have slightly lower survival chances compared to the average patient in the dataset."
+83,"The model considers that a higher Apache score (25.0) decreases the prediction of survival chance by -0.1324 compared to the average Apache score of 22.08.
+Similarly, having a higher LGI (3240.0) decreases the prediction of survival chance by -0.081 compared to the average LGI of 22.08."
+84,"The Apache score of 23 decreases the survival chance by -0.22 compared to an average Apache score of 22.08. 
+
+Having a LGI value of 396 increases the survival chance by 0.008 compared to an average LGI value of 22.08."
+85,"The model predicts that patients with a higher apache_score have a slightly lower survival chance compared to the average patient.
+
+Patients with a higher LGI value also have a significantly lower survival chance compared to the average patient."
+86,"The patient's Apache score of 17.0 contributed positively to their survival chance, adding 0.077 to the baseline risk of 0.2133. On the other hand, the patient's LGI of 3510.0 contributed negatively, reducing the survival chance by -0.2905 compared to the average LGI value of 22.0857."
+87,"The model indicates that a patient with an Apache score of 18 has a higher survival chance than the baseline risk, contributing 0.22 to the prediction. 
+Similarly, a patient with a LGI value of 540 has a slightly lower survival chance than the baseline risk, with a contribution of 0.17."
+88,"The Apache score of 26.0 has a negative contribution of -0.1629 compared to an average feature value of 22.1, indicating that a higher Apache score is associated with a lower survival chance for patients with acute stroke.
+The LGI value of 2520.0 has a negative contribution of -0.0505 compared to an average feature value of 22.1, suggesting that a higher LGI value is also associated with a lower survival chance for these patients."
+89,"The feature `apache_score` has a value of 25.0, which contributes negatively to the model's prediction by -0.16095238095238099 compared to an average feature value of 22.085714285714285. This means that a higher `apache_score` may slightly decrease the predicted survival chance of a patient.
+
+The feature `LGI` has a value of 2340.0, which contributes negatively to the model's prediction by -0.05238095238095239 compared to an average feature value of 22.085714285714285. This suggests that a higher `LGI` value may also slightly decrease the predicted survival chance of a patient."
+90,"The model predicts that patients with a higher apache_score have a lower survival chance compared to the baseline risk. Similarly, patients with a higher LGI value also have a slightly lower survival chance according to the model."
+91,"The apache_score of 32.0 contributes -0.179 to the survival chance prediction, compared to an average apache_score of 22.1. 
+The LGI of 1944.0 contributes -0.034 to the survival chance prediction, compared to an average LGI of 22.1."
+92,"The feature "apache_score" with a value of 31.0 has a negative contribution of -0.1809 towards the model's prediction, compared to an average feature value of 22.0857. This means that a higher apache_score is associated with a lower survival chance for patients with acute stroke.
+
+The feature "LGI" with a value of 1764.0 has a negative contribution of -0.0324 towards the model's prediction, compared to an average feature value of 22.0857. This suggests that a higher LGI value is associated with a slightly lower survival chance for patients with acute stroke."
+93,"The model considers the Apache score of 33.0 for a patient, which has a negative impact of -0.163 on their survival chance. This means that higher Apache scores are associated with lower survival chances compared to the average Apache score of 22.1 in the dataset.
+
+Similarly, the model looks at the LGI value of 2520.0 for a patient, which contributes -0.050 to their survival chance. This suggests that higher LGI values may be linked to lower survival chances compared to the average LGI value in the dataset."
+94,"The model predicts that patients with a higher APACHE score have a decreased survival chance, contributing -0.13 to the overall prediction. 
+Similarly, patients with a higher LGI value have a slightly decreased survival chance, contributing -0.08 to the overall prediction."
+95,"The patient's apache score of 24.0 has a negative impact of -0.1819 on the survival chance, compared to an average apache score of 22.1.
+The patient's LGI of 1782.0 has a negative impact of -0.0314 on the survival chance, compared to an average LGI of 22.1."
+96,"The feature "apache_score" with a value of 9.0 contributes the most to the model's prediction, increasing the survival chance by 0.67 compared to the average feature value of 22.08. 
+
+The feature "LGI" with a value of 576.0 also contributes positively to the prediction, increasing the survival chance by 0.12 compared to the average feature value of 22.08. 
+
+Overall, these features contribute to a higher survival chance for patients with acute stroke according to the ML model."
+97,"The Apache score of 19.0 contributes a negative impact of -0.035 to the survival chance prediction. This means that lower Apache scores are associated with a slightly higher survival chance compared to the average Apache score of 22.1.
+
+Having an LGI value of 2430.0 contributes a negative impact of -0.178 to the survival chance prediction. This suggests that higher LGI values are associated with a lower survival chance compared to the average LGI value of 22.1."
+98,"The model predicts that a patient with an Apache score of 21 has a slightly lower survival chance compared to the average patient, reducing the survival prediction by 0.0829.
+
+Similarly, a patient with an LGI of 3600 has a lower survival chance compared to the average patient, reducing the survival prediction by 0.1305."
+99,"The model predicts a survival chance of 21.33% for all patients with acute stroke. 
+
+The apache_score of 27.0 has a negative contribution of -0.15 to the prediction, indicating that patients with a higher apache_score are less likely to survive. 
+
+Similarly, the LGI of 2700.0 has a negative contribution of -0.06 to the prediction, suggesting that patients with a higher LGI value have a slightly lower chance of survival compared to the average patient."
+100,"The patient's Apache score of 34 indicates a lower survival chance (-0.166) compared to the average patient (22.09).
+The patient's LGI value of 2160 also slightly decreases their survival chance (-0.047) compared to the average patient (22.09)."
+101,"The Apache score of 27 has a contribution of -0.175 to the model's prediction, which is lower than the average Apache score of 22.08. This suggests that a higher Apache score is associated with a lower survival chance for patients with acute stroke.
+
+The LGI of 1980 has a contribution of -0.038 to the model's prediction, which is lower than the average LGI of 22.08. This indicates that a higher LGI value is associated with a slightly lower survival chance for patients with acute stroke."
+102,"The Apache score of 21 decreases the survival chance by 0.134 compared to the average Apache score of 22.08. Similarly, a LGI of 1944 reduces the survival chance by 0.079 compared to the average LGI of 22.08."
+103,"The model's prediction for survival chance of patients with acute stroke is influenced by different features. 
+For example, a higher apache_score of 26.0 contributes negatively to the prediction (-0.17523809523809528) compared to the average apache_score of 22.085714285714285.
+Similarly, a lower LGI value of 1980.0 also contributes negatively (-0.0380952380952381) compared to the average LGI value of 22.085714285714285."
+104,"The Apache score of 20 indicates a slightly negative contribution (-0.0019) towards the patient's survival chance, as the average Apache score is 22.08.
+The LGI value of 1620 has a more substantial negative contribution (-0.0114) compared to the Apache score, given that the average LGI value is also 22.08."
