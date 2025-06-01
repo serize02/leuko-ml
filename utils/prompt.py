@@ -30,7 +30,7 @@ def generate(model_path, data_path):
         expected_value = sv.base_values
 
         apache_ = f'(apache_score, {input_values[0]}, {values[0]}, {apache_score_avg})'
-        leuko_ = f'(LGI, {input_values[1]}, {values[1]}, {apache_score_avg})'
+        leuko_ = f'(LGI, {input_values[1]}, {values[1]}, {leuko_avg})'
 
         prompt = f"""
             You are helping users understand an ML model's prediction. The model predicts survival chance of patients with acute stroke. 
