@@ -1,13 +1,13 @@
+#!/bin/bash
+
 SERVER_URL="http://localhost:8080/explain"
 INPUT_FILE="outputs/prompts.json"
-OUTPUT_FILE="outputs/explanations.csv"
+OUTPUT_FILE="outputs/explanations.md"
 
 mkdir -p outputs
-echo "id,explanation" > $OUTPUT_FILE
+echo "" > $OUTPUT_FILE
 
 jq -c '.[]' $INPUT_FILE | while read row; do
-  
-  ID=$(echo $row | jq '.id')
   PROMPT=$(echo $row | jq -r '.prompt')
 
   RESPONSE=$(curl -s -X POST "$SERVER_URL" \
@@ -16,5 +16,10 @@ jq -c '.[]' $INPUT_FILE | while read row; do
 
   EXPLANATION=$(echo $RESPONSE | jq -r '.explanation // .message // .response // "ERROR"')
 
-  echo "$ID,\"$EXPLANATION\"" >> $OUTPUT_FILE
+  { echo 
+    echo "$EXPLANATION"
+    echo ""
+    echo "---"
+    echo ""
+  } >> $OUTPUT_FILE
 done
