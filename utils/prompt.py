@@ -33,7 +33,7 @@ def generate(model_path, data_path):
         leuko_ = f'(LGI, {input_values[1]}, {values[1]}, {leuko_avg})'
 
         prompt = f"""
-            You are helping users understand an ML model's prediction. The model predicts survival chance of patients with acute stroke. 
+            You are helping users understand an ML model's prediction. The model predicts survival chance of patients with acute stroke. A higher model output means more survival chance. 
 
             The **expected value of the model's output** is {expected_value}. This is the baseline risk for all patients.
 
