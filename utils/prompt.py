@@ -21,6 +21,8 @@ def generate(model_path, data_path):
     explainer = shap.KernelExplainer(lambda x: model.predict_proba(x)[:, 1], X)
     shap_values = explainer(X)
 
+    y_preds = model.predict(X)
+
     prompts = []
 
     for i, sv in tqdm(enumerate(shap_values), desc='XAI-prompts'):
@@ -44,6 +46,12 @@ def generate(model_path, data_path):
             {leuko_}
         """
 
-        prompts.append({'id': i, 'prompt': prompt})
+        prompts.append({
+            'id': i,
+            'apache_score': float(input_values[0]),
+            'leuko_glycemic_index': float(input_values[1]),
+            'prediction': float(y_preds[i]),
+            'prompt': prompt.strip(),
+        })
 
     return prompts
