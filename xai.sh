@@ -1,25 +1,19 @@
 #!/bin/bash
 
 SERVER_URL="http://localhost:8080/explain"
-INPUT_FILE="outputs/prompts.json"
-OUTPUT_FILE="outputs/explanations.md"
+INPUT_FILE="outputs/meta-prompts.json"
 
-mkdir -p outputs
-echo "" > $OUTPUT_FILE
-
-jq -c '.[]' $INPUT_FILE | while read row; do
-  PROMPT=$(echo $row | jq -r '.prompt')
+jq -c '.[]' "$INPUT_FILE" | while read row; do
+  PROMPT=$(echo "$row" | jq -r '.prompt')
+  APACHE=$(echo "$row" | jq -r '.apache_score')
+  LGI=$(echo "$row" | jq -r '.leuko_glycemic_index')
+  PREDICTION=$(echo "$row" | jq -r '.prediction')
 
   RESPONSE=$(curl -s -X POST "$SERVER_URL" \
     -H "Content-Type: application/json" \
     -d "{\"prompt\": \"$PROMPT\"}")
 
-  EXPLANATION=$(echo $RESPONSE | jq -r '.explanation // .message // .response // "ERROR"')
+  EXPLANATION=$(echo "$RESPONSE" | jq -r '.explanation // .message // .response // "ERROR"')
 
-  { echo 
-    echo "$EXPLANATION"
-    echo ""
-    echo "---"
-    echo ""
-  } >> $OUTPUT_FILE
+  ./xai-db/insert-data "$APACHE" "$LGI" "$PREDICTION" "$EXPLANATION"
 done
