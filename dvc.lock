@@ -5,8 +5,8 @@ stages:
     deps:
     - path: configs/config.yaml
       hash: md5
-      md5: 4dc151aae3fa66d7ace9faf2e2629693
-      size: 249
+      md5: 944f1588ea70bee6886c07bc9fdc5bb6
+      size: 295
     - path: pipeline/data_ingestion.py
       hash: md5
       md5: 61333bf7d40602480ae20eb6f119131a
@@ -33,8 +33,8 @@ stages:
       size: 1494
     - path: configs/config.yaml
       hash: md5
-      md5: 4dc151aae3fa66d7ace9faf2e2629693
-      size: 249
+      md5: 944f1588ea70bee6886c07bc9fdc5bb6
+      size: 295
     - path: pipeline/trainer.py
       hash: md5
       md5: 9984e58fb93e62723d32e74f269efeb4
@@ -52,3 +52,35 @@ stages:
       hash: md5
       md5: 303534c84059d6eb08a271502cba5bf9
       size: 7773
+  generate_prompts:
+    cmd: python scripts/generate_prompts.py
+    deps:
+    - path: artifacts/acute-stroke-selected:v2/new_data.csv
+      hash: md5
+      md5: 4f0528accd7966f9dfe4de64a5944452
+      size: 1494
+    - path: configs/config.yaml
+      hash: md5
+      md5: 944f1588ea70bee6886c07bc9fdc5bb6
+      size: 295
+    - path: outputs/knn.joblib
+      hash: md5
+      md5: 303534c84059d6eb08a271502cba5bf9
+      size: 7773
+    - path: pipeline/prompt_generator.py
+      hash: md5
+      md5: ee2074cd83b2670ef2608debb6edc146
+      size: 2439
+    - path: scripts/generate_prompts.py
+      hash: md5
+      md5: babac7c806be3731caf8d4e7c1dd51e5
+      size: 894
+    - path: utils/common.py
+      hash: md5
+      md5: 78e4c5e935ad2deee1313700a0dca91e
+      size: 2172
+    outs:
+    - path: outputs/meta_prompts.json
+      hash: md5
+      md5: 0bcd797222dd2bdd221c4a4c244bca0d
+      size: 93052

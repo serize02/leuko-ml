@@ -2,19 +2,30 @@ stages:
   ingest_data:
     cmd: python scripts/ingest.py
     deps:
-    - configs/config.yaml
-    - scripts/ingest.py
-    - pipeline/data_ingestion.py
-    - utils/common.py
+      - scripts/ingest.py
+      - pipeline/data_ingestion.py
+      - utils/common.py
+      - configs/config.yaml
     outs:
-    - artifacts/acute-stroke-selected:v2/new_data.csv
+      - artifacts/acute-stroke-selected:v2/new_data.csv
   train_model:
     cmd: python scripts/train.py
     deps:
-    - artifacts/acute-stroke-selected:v2/new_data.csv
-    - configs/config.yaml
-    - pipeline/trainer.py
-    - scripts/train.py
-    - utils/common.py
+      - scripts/train.py
+      - pipeline/trainer.py
+      - utils/common.py
+      - artifacts/acute-stroke-selected:v2/new_data.csv
+      - configs/config.yaml
     outs:
-    - outputs/knn.joblib
+      - outputs/knn.joblib
+  generate_prompts:
+    cmd: python scripts/generate_prompts.py
+    deps:
+      - scripts/generate_prompts.py
+      - pipeline/prompt_generator.py
+      - utils/common.py
+      - configs/config.yaml
+      - outputs/knn.joblib
+      - artifacts/acute-stroke-selected:v2/new_data.csv
+    outs:
+      - outputs/meta_prompts.json

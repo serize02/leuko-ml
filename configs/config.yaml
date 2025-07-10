@@ -1,5 +1,6 @@
 data_artifact_path: artifacts/acute-stroke-selected:v2/new_data.csv
 model_output_path: outputs/knn.joblib
 target_column: discharge_status
-wandb_artifact: ernestoserize-constructor-university/leuko-ml/acute-stroke-selected:v2
 wandb_project: leuko-ml
+wandb_artifact: ernestoserize-constructor-university/leuko-ml/acute-stroke-selected:v2
+meta_prompt_output: outputs/meta_prompts.json
