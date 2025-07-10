@@ -1,0 +1,54 @@
+schema: '2.0'
+stages:
+  ingest_data:
+    cmd: python scripts/ingest.py
+    deps:
+    - path: configs/config.yaml
+      hash: md5
+      md5: 4dc151aae3fa66d7ace9faf2e2629693
+      size: 249
+    - path: pipeline/data_ingestion.py
+      hash: md5
+      md5: 61333bf7d40602480ae20eb6f119131a
+      size: 783
+    - path: scripts/ingest.py
+      hash: md5
+      md5: 31a7f56e3fe08b369018c6d620b0d619
+      size: 437
+    - path: utils/common.py
+      hash: md5
+      md5: 78e4c5e935ad2deee1313700a0dca91e
+      size: 2172
+    outs:
+    - path: artifacts/acute-stroke-selected:v2/new_data.csv
+      hash: md5
+      md5: 4f0528accd7966f9dfe4de64a5944452
+      size: 1494
+  train_model:
+    cmd: python scripts/train.py
+    deps:
+    - path: artifacts/acute-stroke-selected:v2/new_data.csv
+      hash: md5
+      md5: 4f0528accd7966f9dfe4de64a5944452
+      size: 1494
+    - path: configs/config.yaml
+      hash: md5
+      md5: 4dc151aae3fa66d7ace9faf2e2629693
+      size: 249
+    - path: pipeline/trainer.py
+      hash: md5
+      md5: 9984e58fb93e62723d32e74f269efeb4
+      size: 1904
+    - path: scripts/train.py
+      hash: md5
+      md5: a49ea3d7b71ee66eea09a01c08afca8d
+      size: 533
+    - path: utils/common.py
+      hash: md5
+      md5: 78e4c5e935ad2deee1313700a0dca91e
+      size: 2172
+    outs:
+    - path: outputs/knn.joblib
+      hash: md5
+      md5: 303534c84059d6eb08a271502cba5bf9
+      size: 7773

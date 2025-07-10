@@ -1,0 +1,20 @@
+stages:
+  ingest_data:
+    cmd: python scripts/ingest.py
+    deps:
+    - configs/config.yaml
+    - scripts/ingest.py
+    - pipeline/data_ingestion.py
+    - utils/common.py
+    outs:
+    - artifacts/acute-stroke-selected:v2/new_data.csv
+  train_model:
+    cmd: python scripts/train.py
+    deps:
+    - artifacts/acute-stroke-selected:v2/new_data.csv
+    - configs/config.yaml
+    - pipeline/trainer.py
+    - scripts/train.py
+    - utils/common.py
+    outs:
+    - outputs/knn.joblib
