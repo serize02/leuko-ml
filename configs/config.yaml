@@ -1,12 +1,3 @@
-data:
-  drive: 'https://drive.google.com/uc?/export=download&id=1JGrXjTZsn2IkPesMQ_9E_yYRQ-VfBZ7q'
-  local_path: 'data/data.csv'
-
-wandb:
-  datasets:
-    raw: 'ernestoserize-constructor-university/leuko-ml/acute-stroke-clinical-data:v0'
-    selected: 'ernestoserize-constructor-university/leuko-ml/acute-stroke-selected:v2'
-  models:
-    knn: 'ernestoserize-constructor-university/leuko-ml/knn:v0'
-    svc-rbf: 'ernestoserize-constructor-university/leuko-ml/svc:v0'
-    svc-sigmoid: 'ernestoserize-constructor-university/leuko-ml/svc:v1'
+data_artifact_path: artifacts/acute-stroke-selected:v2/new_data.csv
+model_output_path: outputs/knn.joblib
+target_column: discharge_status
