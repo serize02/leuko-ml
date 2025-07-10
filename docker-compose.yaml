@@ -1,0 +1,32 @@
+networks:
+  xai_net:
+    driver: bridge
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - "8080:8080"
+    networks:
+      - xai_net
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - WANDB_API_KEY=${WANDB_API_KEY}
+    volumes:
+      - ./xai.db:/app/xai.db
+
+  runner:
+    build:
+      context: .
+      dockerfile: Dockerfile.runner
+    depends_on:
+      - server
+    networks:
+      - xai_net
+    volumes:
+      - ./:/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - WANDB_API_KEY=${WANDB_API_KEY}

@@ -29,3 +29,17 @@ stages:
       - artifacts/acute-stroke-selected:v2/new_data.csv
     outs:
       - outputs/meta_prompts.json
+  xai-gpt:
+    cmd: bash scripts/send_to_server.sh
+    deps:
+      - scripts/send_to_server.sh
+      - outputs/meta_prompts.json
+      - xai-server/main.go
+  xai-results:
+    cmd: bash scripts/xai_export.sh
+    deps:
+      - scripts/xai_export.sh
+      - xai.db
+    outs:
+      - outputs/xai_gpt.csv  
+    

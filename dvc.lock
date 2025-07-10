@@ -84,3 +84,34 @@ stages:
       hash: md5
       md5: 0bcd797222dd2bdd221c4a4c244bca0d
       size: 93052
+  xai-gpt:
+    cmd: bash scripts/send_to_server.sh
+    deps:
+    - path: outputs/meta_prompts.json
+      hash: md5
+      md5: 0bcd797222dd2bdd221c4a4c244bca0d
+      size: 93052
+    - path: scripts/send_to_server.sh
+      hash: md5
+      md5: c5867f78acb92372a8dc8c97f209e73c
+      size: 893
+    - path: xai-server/main.go
+      hash: md5
+      md5: 6fc6d3a889ed8badf84beefa9a10445f
+      size: 726
+  xai-results:
+    cmd: bash scripts/xai_export.sh
+    deps:
+    - path: scripts/xai_export.sh
+      hash: md5
+      md5: 0496725dab12bab77c6ce986dd65b499
+      size: 433
+    - path: xai.db
+      hash: md5
+      md5: dd717d5f998f6f2836a51ab288f0652a
+      size: 53248
+    outs:
+    - path: outputs/xai_gpt.csv
+      hash: md5
+      md5: 39cf2dd7002394fcd6bae97d18180cd4
+      size: 33254
