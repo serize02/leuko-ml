@@ -1,0 +1,74 @@
+name: leuko-cml
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Set up DVC
+        run: |
+          pip install dvc[gs] dvc-gdrive
+
+      - name: Set up Docker
+        run: |
+          docker --version
+          docker-compose --version
+
+      - name: Build Docker containers
+        run: docker-compose build
+
+      - name: Run containers
+        run: docker-compose up -d
+
+      - name: Wait for server to become ready
+        run: |
+          until curl -s http://localhost:8080/ping > /dev/null; do
+            echo "Waiting for server..."
+            sleep 2
+          done
+          echo "Server is ready."
+
+      - name: Run DVC pipeline
+        run: docker-compose exec runner dvc repro
+
+      - name: Upload knn.joblib model
+        uses: actions/upload-artifact@v3
+        with:
+          name: knn-model
+          path: outputs/knn.joblib
+
+      - name: Upload exported CSV
+        uses: actions/upload-artifact@v3
+        with:
+          name: predictions-csv
+          path: outputs/xai_gpt.csv
+
+      - name: Install CML
+        run: pip install cml
+
+      - name: Post CML report
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "## Model Results" > report.md
+          echo "\n### Sample of Exported Data" >> report.md
+          head -n 15 outputs/xai_gpt.csv >> report.md
+          cml comment create report.md
+
+      - name: Stop containers
+        if: always()
+        run: docker-compose down
