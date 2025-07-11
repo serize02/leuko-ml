@@ -7,11 +7,10 @@ on:
   pull_request:
 
 jobs:
-  setup:
-    name: Setup environment
+  servos:
+    name: Build, Run Server & Execute Pipeline
     runs-on: ubuntu-latest
-    outputs:
-      docker-cache: ${{ steps.cache.outputs.cache-hit }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -30,8 +29,8 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install DVC
-        run: pip install dvc[gs] dvc-gdrive
+      - name: Install DVC and CML
+        run: pip install dvc[gs] dvc-gdrive cml
 
       - name: Check Docker versions
         run: |
@@ -41,26 +40,18 @@ jobs:
       - name: Build Docker containers
         run: docker compose build
 
-  run-server:
-    name: Run server & wait
-    runs-on: ubuntu-latest
-    needs: setup
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
       - name: Start server container
         run: docker compose up -d server
 
-  run-dvc:
-    name: Run DVC Pipeline
-    runs-on: ubuntu-latest
-    needs: run-server
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Wait for server
+        run: |
+          until curl -s http://localhost:8080/ping > /dev/null; do
+            echo "Waiting for server..."
+            sleep 2
+          done
+          echo "Server is ready."
 
-      - name: Run runner container
+      - name: Run runner container (DVC Pipeline)
         run: docker compose run --rm runner
 
       - name: Upload knn.joblib
@@ -74,9 +65,6 @@ jobs:
         with:
           name: predictions-csv
           path: outputs/exported_data.csv
-
-      - name: Install CML
-        run: pip install cml
 
       - name: Create CML report
         env:
