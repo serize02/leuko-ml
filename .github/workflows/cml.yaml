@@ -52,14 +52,6 @@ jobs:
       - name: Start server container
         run: docker compose up -d server
 
-      - name: Wait for server
-        run: |
-          until curl -s http://localhost:8080/ping > /dev/null; do
-            echo "Waiting for server..."
-            sleep 2
-          done
-          echo "Server is ready."
-
   run-dvc:
     name: Run DVC Pipeline
     runs-on: ubuntu-latest
