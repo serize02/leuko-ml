@@ -1,4 +1,4 @@
-name: leuko-cml
+name: LeukoML CI/CD Pipeline
 
 on:
   push:
@@ -7,21 +7,31 @@ on:
   pull_request:
 
 jobs:
-  build-and-run:
+  setup:
+    name: Setup environment
     runs-on: ubuntu-latest
-
+    outputs:
+      docker-cache: ${{ steps.cache.outputs.cache-hit }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+
+      - name: Cache Docker layers
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-docker-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-docker-
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Set up DVC
-        run: |
-          pip install dvc[gs] dvc-gdrive
+      - name: Install DVC
+        run: pip install dvc[gs] dvc-gdrive
 
       - name: Set up Docker
         run: |
@@ -31,10 +41,18 @@ jobs:
       - name: Build Docker containers
         run: docker-compose build
 
-      - name: Run containers
-        run: docker-compose up -d
+  run-server:
+    name: Run server & wait
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Wait for server to become ready
+      - name: Start server container
+        run: docker-compose up -d server
+
+      - name: Wait for server
         run: |
           until curl -s http://localhost:8080/ping > /dev/null; do
             echo "Waiting for server..."
@@ -42,11 +60,19 @@ jobs:
           done
           echo "Server is ready."
 
-      - name: Run DVC pipeline
-        run: docker-compose exec runner dvc repro
+  run-dvc:
+    name: Run DVC Pipeline
+    runs-on: ubuntu-latest
+    needs: run-server
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Upload knn.joblib model
-        uses: actions/upload-artifact@v3
+      - name: Run runner container
+        run: docker-compose run --rm runner
+
+      - name: Upload knn.joblib
+        uses: actions/upload-artifact@v4
         with:
           name: knn-model
           path: outputs/knn.joblib
@@ -55,20 +81,20 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: predictions-csv
-          path: outputs/xai_gpt.csv
+          path: outputs/exported_data.csv
 
       - name: Install CML
         run: pip install cml
 
-      - name: Post CML report
+      - name: Create CML report
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "## Model Results" > report.md
-          echo "\n### Sample of Exported Data" >> report.md
-          head -n 15 outputs/xai_gpt.csv >> report.md
+          echo "## Model Report" > report.md
+          echo "\n### Preview of Output CSV" >> report.md
+          head -n 10 outputs/exported_data.csv >> report.md
           cml comment create report.md
 
-      - name: Stop containers
+      - name: Shutdown services
         if: always()
         run: docker-compose down
